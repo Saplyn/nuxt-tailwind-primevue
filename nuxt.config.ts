@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     "nuxt-primevue",
+    '@nuxtjs/tailwindcss',
   ],
   primevue: {
     options: {
@@ -11,5 +12,8 @@ export default defineNuxtConfig({
     importPT: { as: 'Tailwind', from: 'primevue/passthrough/tailwind' },
     cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities',
   },
-  css: ['primevue/resources/themes/lara-dark-green/theme.css']
+  css: [
+    'primevue/resources/themes/lara-light-pink/theme.css',
+    'assets/main.css'
+  ]
 })
