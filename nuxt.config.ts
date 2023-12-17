@@ -2,18 +2,25 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    "nuxt-primevue",
+    'nuxt-primevue',
     '@nuxtjs/tailwindcss',
   ],
   primevue: {
+    usePrimeVue: true,
     options: {
       unstyled: false,
+      ripple: true,
     },
-    importPT: { as: 'Tailwind', from: 'primevue/passthrough/tailwind' },
     cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities',
   },
   css: [
-    // 'primevue/resources/themes/lara-light-pink/theme.css',
-    'assets/main.css'
-  ]
+    'assets/css/tailwind.css',
+    'primevue/resources/themes/lara-dark-pink/theme.css',
+  ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 })
