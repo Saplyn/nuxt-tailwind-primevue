@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     "nuxt-primevue",
-    '@nuxtjs/tailwindcss',
   ],
   primevue: {
     options: {
